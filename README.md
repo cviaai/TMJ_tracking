@@ -40,8 +40,21 @@ python eval.py
 ```
 
 ## Results
+Here are the visual results of joint tracking for all chosen architectures: U-Net, 3D U-Net, and 3D U-Net + LSTM. 
+From top to bottom outputs for several frames (first frame, 2 intermediate frames and last frame in the video). For this sample, it is seen that U-Net choses a wrong point for tracking from the beginning, while 3D Unet and 3D Unet+LSTM chose the right point.
+3D U-Net was quite good in its predictions, but made several mistakes during the path and 3D U-Net enhanced with LSTM made very accurate predictions.
+On this frame it is seen that 3D U-Net + LSTM made a more accurate prediction than the manual label (the leftmost blue point (prediction) is located directly on the head of the jaw, while the green point (annotation) is not). It’s example of annotation mistake. It confirms the significance of the automation technique for joint tracking, making it more objective and accurate. 
 <p align="left">
-<img src="./imgs/results_lstm.jpg" alt>
+<img src="./imgs/results_v2.jpg" alt>
+
+</p>
+
+<p >
+<em>Fig. 2. Tracking results of 3D U-Net + LSTN performance for 1 sequences. It represents the last frame of a test video with  joint trajectory, collected from all previous frames.</em>
+</p>
+
+<p align="left">
+<img src="./imgs/results_lstm.eps" alt>
   
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
