@@ -45,6 +45,8 @@ python eval.py
   
 [![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
 
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
+  
 </p>
 <p >
 <em>Fig. 2. Tracking results of 3D U-Net + LSTN performance for 1 ultrasound video.  It represents one test video with the ground truth joint trajectory (green), predictions of 3D U-Net + LSTM (blue) and their comparison.</em>
