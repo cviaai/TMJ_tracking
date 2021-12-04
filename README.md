@@ -50,7 +50,7 @@ From top to bottom outputs for several frames (first frame, 2 intermediate frame
 3D U-Net was quite good in its predictions, but made several mistakes during the path and 3D U-Net enhanced with LSTM made very accurate predictions.
 On this frame it is seen that 3D U-Net + LSTM made a more accurate prediction than the manual label (the leftmost blue point (prediction) is located directly on the head of the jaw, while the green point (annotation) is not). It’s example of annotation mistake. It confirms the significance of the automation technique for joint tracking, making it more objective and accurate. 
 <p align="center">
-<img src="./imgs/res.jpg" alt>
+<img src="./imgs/comp_res.jpg" alt>
 </p>
 
 <p >
