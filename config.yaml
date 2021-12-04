@@ -1,0 +1,92 @@
+loaders:
+  train_patch:
+  - 300
+  - 388
+  - 8
+  train_stride:
+  - 300
+  - 388
+  - 1
+  val_patch:
+  - 300
+  - 388
+  - 8
+  val_stride:
+  - 300
+  - 388
+  - 8
+  video_path: "./prepared_data/crop_video/"
+  mask_path: "./prepared_data/crop_dots/"
+  voi_shape:
+  - 300
+  - 388
+  - 8
+  precrop: 'True'
+  train_patient_ids:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  val_patient_ids:
+  - 11
+  - 12
+  - 13
+  num_workers: 8
+  batch_size: 1
+  transformer:
+    train:
+      raw:
+      - name: Normalize
+      - name: RandomFlip
+        axes:
+        - 2
+        execution_probability: 0.5
+      - name: RandomRotate
+        axes:
+        - - 0
+          - 1
+        angle_spectrum: 5
+        mode: nearest
+      - name: RandomContrast
+        execution_probability: 0.5
+        alpha:
+        - 1
+        - 2
+      label:
+      - name: RandomFlip
+        axes:
+        - 2
+        execution_probability: 0.5
+      - name: RandomRotate
+        axes:
+        - - 0
+          - 1
+        angle_spectrum: 5
+        mode: constant
+    test:
+      raw:
+      - name: Normalize
+      label: []
+training:
+  num_epochs: 100
+  batch_size: 1
+  learning_rate: 0.0001
+  wd: 0.0005
+  model_name: UNet3D_LSTM
+  model_save_name: UNet_3D_LSTM_ce_mse_sum_100.pth
+  in_channels: 1
+  out_channels: 2
+  layer_order: crg
+  f_maps: 32
+  num_groups: 8
+  pool_kernel_size:
+  - 1
+  - 2
+  - 2
+  final_sigmoid: False
