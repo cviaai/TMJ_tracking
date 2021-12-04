@@ -31,6 +31,11 @@ python train.py
 
 See config.yaml - a configuration file, for example how to specify all aspects of the training procedure.
 
+## Pre-trained Models
+
+You can download pretrained model here:
+- Pre-trained 3D-UNet + LSTM model for landmark tracking on US video: https://drive.google.com/drive/folders/1DWb84ZMZTtZQ-3i8nT0RZSiDNde8FerZ?usp=sharing
+
 ## Evaluation
 
 To evaluate models, run:
@@ -46,7 +51,7 @@ From top to bottom outputs for several frames (first frame, 2 intermediate frame
 On this frame it is seen that 3D U-Net + LSTM made a more accurate prediction than the manual label (the leftmost blue point (prediction) is located directly on the head of the jaw, while the green point (annotation) is not). It’s example of annotation mistake. It confirms the significance of the automation technique for joint tracking, making it more objective and accurate. 
 <p align="left">
 <img src="./imgs/results_v2.jpg" alt>
-
+<img src="./imgs/comparison.pdf" alt>
 </p>
 
 <p >
@@ -54,21 +59,11 @@ On this frame it is seen that 3D U-Net + LSTM made a more accurate prediction th
 </p>
 
 <p align="left">
-<img src="./imgs/results_lstm.eps" alt>
+<img src="./imgs/lstm_results.gif" alt>
 
 </p>
-  
-<p >
-<em>Fig. 2. Tracking results of 3D U-Net + LSTM performance for 1 sequences. It represents the last frame of a test video with  joint trajectory, collected from all previous frames.</em>
-</p>
-
 
   
-[![Watch the video](https://img.youtube.com/vi/T-D1KVIuvjA/maxresdefault.jpg)](https://youtu.be/T-D1KVIuvjA)
-
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
-  
-</p>
 <p >
 <em>Tracking results of 3D U-Net + LSTN performance for 1 ultrasound video.  It represents one test video with the ground truth joint trajectory (green), predictions of 3D U-Net + LSTM (blue) and their comparison.</em>
 </p>
